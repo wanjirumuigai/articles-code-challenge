@@ -9,6 +9,8 @@ end
 
 sidney = Author.new("Sidney Sheldon")
 
+mag1 = Magazine.new("Drum", "Lifestyle")
+
 
 
 
