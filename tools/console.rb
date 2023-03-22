@@ -11,6 +11,9 @@ sidney = Author.new("Sidney Sheldon")
 
 mag1 = Magazine.new("Drum", "Lifestyle")
 
+article1 = Article.new(sidney, mag1, "Nothing lasts forever")
+
+
 
 
 
