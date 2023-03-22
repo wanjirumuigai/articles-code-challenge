@@ -7,6 +7,7 @@ end
 
 ###  WRITE YOUR TEST CODE HERE ###
 
+sidney = Author.new("Sidney Sheldon")
 
 
 
