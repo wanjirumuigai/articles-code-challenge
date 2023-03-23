@@ -21,4 +21,12 @@ attr_reader :author, :magazine, :title
         @@all
     end
 
+    def author 
+        @author
+    end
+
+    def magazine 
+        @magazine
+    end
+
 end
