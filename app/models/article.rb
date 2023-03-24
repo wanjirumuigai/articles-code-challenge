@@ -1,32 +1,40 @@
 class Article
-attr_reader :author, :magazine, :title
+    attr_reader :author, :magazine, :title
 
-@@all = []
+    @@all = []
 
-    def initialize(author, magazine, title)
+    def initialize(author:, magazine:, title:)
 
         if author.is_a?(Author) && magazine.is_a?(Magazine)
-        @author = author
-        @magazine = magazine
-        @title = title
-        @@all = self
+            @author = author
+            @magazine = magazine
+            @title = title
+            @@all << self
+        else
+            begin
+                raise WrongClassError
+            rescue WrongClassError => error
+                puts error.message
+            end
         end
-
     end
 
-    def title
-        @title
-    end
     def self.all
         @@all
     end
 
-    def author 
+    def author
         @author
     end
 
-    def magazine 
+    def magazine
+        # ["#{@magazine.name}, #{@magazine.category}"]
         @magazine
     end
 
+    class WrongClassError < StandardError
+        def message
+            "Check the data types of the Author and/or Magazine"
+        end
+    end
 end

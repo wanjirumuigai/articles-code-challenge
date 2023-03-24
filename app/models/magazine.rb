@@ -2,7 +2,7 @@ class Magazine
   attr_accessor :name, :category
 
 @@all = []
-  def initialize(name, category)
+  def initialize(name:, category:)
     @name = name
     @category = category
     @@all << self
@@ -30,5 +30,8 @@ class Magazine
     end
     mag_contributors.uniq
   end
-
+ def self.find_by_name(name)
+  
+  @@all.find {|mag| mag.name == name}
+ end
 end
