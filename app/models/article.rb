@@ -28,7 +28,7 @@ class Article
     end
 
     def magazine
-        # ["#{@magazine.name}, #{@magazine.category}"]
+       
         @magazine
     end
 
